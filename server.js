@@ -4,7 +4,11 @@ let wss = new WebSocketServer({ port: port_number })
 
 const SerialPort = require('serialport')
 const Readline = require('@serialport/parser-readline')
-const port = new SerialPort('/dev/cu.usbmodem1432401', { baudRate: 9600 })
+
+//Change this with your arduino port location
+let usb_location = '/dev/cu.usbmodem1432401'
+
+const port = new SerialPort(usb_location, { baudRate: 9600 })
 const parser = port.pipe(new Readline({ delimiter: '\r\n' }))
 
 console.log('💾: Started server at port: ', port_number)
