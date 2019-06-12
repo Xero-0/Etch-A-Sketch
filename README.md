@@ -4,6 +4,8 @@ Use potentiometers to draw on a webpage!
 
 This is fun project to gain an understanding of arduinos, nodejs, websockets and p5js
 
+![](etch-my-sketch.gif)
+
 Built with 💖 by [@JimAlexander](https://www.instagram.com/jimalexander/)
 
 ## Hardware Required
