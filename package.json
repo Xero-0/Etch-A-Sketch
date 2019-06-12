@@ -1,0 +1,16 @@
+{
+  "name": "arduino_v2",
+  "version": "1.0.0",
+  "description": "View arduino data on a web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jim Alexander",
+  "license": "MIT",
+  "dependencies": {
+    "serialport": "^7.1.5",
+    "ws": "^7.0.0"
+  }
+}

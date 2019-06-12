@@ -1,0 +1,61 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    background: #ecf0f1;
+    height: 100vh
+}
+
+body {
+    margin: 0
+}
+
+#value {
+    font-size: 250px;
+    font-weight: bold;
+    word-break: break-word;
+    margin-top: -15px
+}
+
+#my_dot {
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+
+#clear_button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#clear_button {
+    padding: 10px 30px;
+    border: 2px solid #000;
+    position: absolute;
+    bottom: 40px;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    background-color: #fff;
+    padding-top: 14px
+}
+
+#clear_button:hover {
+    background: lightgrey
+}
+
+#clear_button:active {
+    background: #000;
+    color: #fff;
+}
+
+.p5Canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
