@@ -1,8 +1,11 @@
 var ws = new WebSocket('ws://localhost:3000')
+
 ws.onopen = () => console.log('💻️: Connected')
 ws.onclose = () => console.log('💻️: Disconnected')
 ws.onmessage = msg => updateTwoVariables(msg.data)
+
 var line_coordinates = []
+
 const updateTwoVariables = val => {
   let dot = document.getElementById('my_dot').style
   let inputs = val.split(' ')
@@ -11,7 +14,18 @@ const updateTwoVariables = val => {
   let pin_1 = inputs[1]
   dot.left = `${calc(pin_0)}%`
   dot.top = `${calc(pin_1)}%`
-  line_coordinates.push({ x: calc(pin_0), y: calc(pin_1) })
+
+  let new_coordinate = { x: calc(pin_0), y: calc(pin_1) }
+
+  let previous_coordinate = line_coordinates.length ? line_coordinates[line_coordinates.length - 1] : null
+
+  if (previous_coordinate !== null) {
+    if (previous_coordinate.x !== new_coordinate.x || previous_coordinate.y !== new_coordinate.y) {
+      line_coordinates.push(new_coordinate)
+    }
+  } else if (previous_coordinate === null) {
+    line_coordinates.push(new_coordinate)
+  }
 }
 let stroke_color = '#000'
 function setup() {
