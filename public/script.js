@@ -1,4 +1,4 @@
-var ws = new WebSocket('ws://localhost:3000')
+var ws = new WebSocket('ws://192.168.4.1:3000')
 
 ws.onopen = () => console.log('💻️: Connected')
 ws.onclose = () => console.log('💻️: Disconnected')
