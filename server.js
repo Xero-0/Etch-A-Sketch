@@ -6,7 +6,8 @@ const SerialPort = require('serialport')
 const Readline = require('@serialport/parser-readline')
 
 //Change this with your arduino port location
-let usb_location = '/dev/cu.usbmodem1432401'
+//Probably = '/COM3' on windows || '/dev/cu.usbmodem...' on MAC and Linux
+let usb_location = '/COM3'
 
 const port = new SerialPort(usb_location, { baudRate: 9600 })
 const parser = port.pipe(new Readline({ delimiter: '\r\n' }))
