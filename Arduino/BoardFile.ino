@@ -15,5 +15,5 @@ void loop()
   Serial.println(sensorValue_01);
 
   // Delay in between reads for stability
-  delay(500);
+  delay(250);
 }
